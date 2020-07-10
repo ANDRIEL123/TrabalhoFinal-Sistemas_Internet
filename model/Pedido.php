@@ -1,14 +1,12 @@
 <?php
 include("Produto.php");
 
-
-
-
-
 class Pedido extends Cliente
 {
     var $idPedido;
-    var $produto;
+    var $produto = new Produto();
+    //INSTANCIANDO $this->produto->getNome();
+
     function getIdPedido()
     {
         return $this->idPedido;
