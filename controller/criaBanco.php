@@ -35,10 +35,13 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
 	  idclientes int not null auto_increment,
 	  nome VARCHAR(100) NOT NULL,
 	  idade int not null,
-	  sexo VARCHAR(45) NULL DEFAULT NULL,
+	  sexo VARCHAR(45) NOT NULL,
+	  cep INT(11),
 	  endereco VARCHAR(100) NULL DEFAULT NULL,
-	  numero int not null,
+	  numero int,
+	  cidade VARCHAR(45) NULL DEFAULT NULL,
 	  complemento VARCHAR(45) NULL DEFAULT NULL,
+	  estado varchar(45) NULL DEFAULT NULL,
 	  primary key (idclientes)
 	);
 	
