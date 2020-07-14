@@ -69,7 +69,6 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
 		ON DELETE CASCADE);";
 
 
-
 if ($conexao->multi_query($sql) === TRUE) {
     echo "Tabelas criadas com sucesso!";
 } else {

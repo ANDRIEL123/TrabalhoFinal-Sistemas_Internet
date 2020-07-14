@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <style>
+        #cadastro-produto {
+            margin-top: 10px;
+            border: solid black 1px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 40%;
+        }
+
+        #cadastro-produto input {
+            height: 23px;
+            width: 200px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgba(0, 7, 7, 0.753);">
+    <form action="../controller/cadastrarProduto.php" method="post">
+
+        <center>
+            <button><a href="menu.html">Menu</a></button>
+            <div id="cadastro-produto">
+                <h2 style="color: rgb(0, 209, 209);">Cadastro de Produto</h2>
+                <input type="text" name="nome" placeholder="Digite o nome" required><br><br>
+                <input type="number" name="preco" step="any" placeholder="Digite o preço" required><br><br>
+                <input type="submit" value="Cadastrar">
+            </div>
+        </center>
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
