@@ -8,16 +8,16 @@ $senha = "";
 $conexao = new mysqli($ip, $usuario, $senha);
 
 if ($conexao->connect_error) {
-    die("Conexão falhou: " . $conexao->connect_error); // Termina se houver algum problema
+	die("Conexão falhou: " . $conexao->connect_error); // Termina se houver algum problema
 }
 echo "Conexão feita com sucesso!";
 
 //criar o banco
 $sql = "CREATE DATABASE IF NOT EXISTS dbpedidos";
 if ($conexao->query($sql) === TRUE) {
-    echo "Banco criado com sucesso!";
+	echo "Banco criado com sucesso!";
 } else {
-    echo "Erro na criação do banco: " . $conexao->error; // Caso contrário, aponta o erro
+	echo "Erro na criação do banco: " . $conexao->error; // Caso contrário, aponta o erro
 }
 
 //seleciona o banco criado acima
@@ -27,7 +27,7 @@ $conexao->select_db("dbpedidos");
 $sql = "CREATE TABLE IF NOT EXISTS produtos (
 		idprodutos int not null auto_increment,
 		nome VARCHAR(100) NOT NULL,
-		precoUnitario decimal(2) not null,
+		precoUnitario DECIMAL(10,2) not null,
 		primary key (idprodutos)
 	);
 	
@@ -70,9 +70,9 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
 
 
 if ($conexao->multi_query($sql) === TRUE) {
-    echo "Tabelas criadas com sucesso!";
+	echo "Tabelas criadas com sucesso!";
 } else {
-    echo "Erro na criação das tabelas: " . $conexao->error; // Caso contrário, aponta o erro
+	echo "Erro na criação das tabelas: " . $conexao->error; // Caso contrário, aponta o erro
 }
 
 //fecha a conexão

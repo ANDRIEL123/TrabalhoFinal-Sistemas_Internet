@@ -2,36 +2,20 @@
 
 class connectedMysql
 {
-
-    var $usuario = "user";
-    var $senha = "password";
+    //conexão com o banco de dados
     var $ip = "localhost";
-    var $banco = "dbpedidos";
-    var $consulta = "";
+    var $usuario = "root";
+    var $senha = "";
 
-    var $link = "";
-
-    var $conexao = new mysqli($this->ip, $this->usuario, $this->senha);
-
-
-    function Conecta()
+    function conecta()
     {
-        if ($this->conexao->connect_error) {
-            die("Conexão falhou: " . $this->conexao->connect_error); // Termina se houver algum problema
-        }
-        echo "Conexão feita com sucesso!";
+        $conexao = new mysqli($this->ip, $this->usuario, $this->senha);
 
-        //criar o banco
-        $sql = "CREATE DATABASE meuBanco";
-        if ($this->conexao->query($sql) === TRUE) {
-            echo "Banco criado com sucesso!";
-        } else {
-            echo "Erro na criação do banco: " . $this->conexao->error; // Caso contrário, aponta o erro
+        if ($conexao->connect_error) {
+            die("Conexão falhou: " . $conexao->connect_error); // Termina se houver algum problema
         }
-    }
 
-    function Desconecta()
-    {
-        $this->conexao->close();
+        $conexao->select_db("dbpedidos");
+        return $conexao;
     }
 }
