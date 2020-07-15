@@ -45,8 +45,8 @@ $conexao = new connectedMysql();
                 </tr>
                 <tr>
                     <?php
-                    //enquanto houverem pessoas
-                    while ($linha = $resultado->fetch_assoc()) { //continua enquanto houverem pessoas
+                    //enquanto houverem produtos
+                    while ($linha = $resultado->fetch_assoc()) { //continua enquanto houverem produtos
                     ?>
                 <tr>
                     <td><?php print $linha['nome'] ?></td>

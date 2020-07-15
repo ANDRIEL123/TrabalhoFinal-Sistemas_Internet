@@ -1,0 +1,14 @@
+
+button {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+input {
+    height: 25px;
+}
