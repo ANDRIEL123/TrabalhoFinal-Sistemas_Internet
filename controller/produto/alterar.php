@@ -3,32 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="alterar.css" rel="stylesheet" type="text/css">
     <title>Alteração</title>
-    <style>
-        #alteracao-produto {
-            margin-top: 10px;
-            border: solid black 1px;
-            padding: 10px;
-            border-radius: 5px;
-            width: 40%;
-        }
-
-        #alteracao-produto input {
-            height: 23px;
-            width: 200px;
-        }
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        button {
-            padding: 10px;
-        }
-    </style>
 
 </head>
 
@@ -49,7 +25,7 @@
     <form action="alteraScript.php" method="post">
         <?php $linha = $resultado->fetch_assoc(); ?>
         <center>
-            <button><a href="../menu.html">Menu</a></button>
+            <button><a href="../../view/menu.html">Menu</a></button>
             <div id="alteracao-produto">
                 <h2 style="color: rgb(0, 209, 209);">Alteração de Produto</h2>
                 <input type="hidden" name="id" value="<?php print $linha['idprodutos'] ?>" />

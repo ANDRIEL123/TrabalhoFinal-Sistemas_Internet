@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cadastraCliente.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <title>Cadastro de Cliente</title>
+</head>
+
+<body style="background-color: rgba(0, 7, 7, 0.753);">
+    <form action="../../controller/cliente/cadastraCliente.php" method="post">
+
+        <center>
+            <button><a href="../menu.html">Menu</a></button>
+            <div id="cadastro-cliente">
+                <h2 style="color: rgb(0, 209, 209);">Cadastro de Clientes</h2>
+                <input type="text" name="nome" placeholder="Digite o nome" required><br><br>
+                <input type="number" name="idade" placeholder="Digite a idade" required><br>
+
+                <div id="sexo" id="sexo">
+                    <h3 style="color: rgb(0, 209, 209);">Sexo</h3>
+                    <select name="sexo">
+                        <option value="Masculino" selected>Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <br><br>
+                <input type="text" name="cep" maxlength="9" class="cep" placeholder="Digite o CEP">
+                <input type="button" value="Buscar" onclick="buscaCep()"></p>
+                <input type="text" name="endereco" class="endereco" placeholder="Digite o endereço"><br><br>
+                <input type="number" name="numero" class="numero" placeholder="Digite o número"><br><br>
+                <input type="text" name="bairro" class="bairro" placeholder="Digite o bairro"><br><br>
+                <input type="text" name="cidade" class="cidade" placeholder="Digite a cidade"><br><br>
+                <input type="text" name="complemento" class="complemento " placeholder="Digite o complemento"><br><br>
+                <input type="text" name="estado" class="estado" placeholder="Digite o estado">
+                <br><br>
+                <input type="submit" value="Cadastrar" style="font-weight: bold;">
+
+            </div>
+        </center>
+        <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+        <script src="js/mascara.js"></script>
+        <script src="js/ajax.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+</body>
+
+</html>

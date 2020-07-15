@@ -1,0 +1,34 @@
+#alterar-cliente {
+    margin-top: 10px;
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 40%;
+}
+
+#alterar-cliente input {
+    height: 23px;
+
+}
+
+#alterar-cliente #sexo {
+
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+}
+
+select {
+    font-weight: bold;
+    height: 35px;
+}

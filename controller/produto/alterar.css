@@ -1,0 +1,23 @@
+#alteracao-produto {
+    margin-top: 10px;
+    border: solid black 1px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 40%;
+}
+
+#alteracao-produto input {
+    height: 23px;
+    width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+}

@@ -16,7 +16,7 @@ $sql = "UPDATE produtos
 if ($conexao->conecta()->query($sql) === TRUE) {
     echo
         "<script>
-        alert('Registro excluído com sucesso!');
+        alert('Registro atualizado com sucesso!');
         window.location.href = '../../view/gerirprodutos.php'
         </script>";
 } else {

@@ -24,7 +24,15 @@ if ($conexao->query($sql) === TRUE) {
 $conexao->select_db("dbpedidos");
 
 //criar as tabelas do banco
-$sql = "CREATE TABLE IF NOT EXISTS produtos (
+$sql = "CREATE TABLE IF NOT EXISTS usuarios (
+	idusuarios INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(100) NULL,
+	usuario VARCHAR(45) NOT NULL,
+	senha VARCHAR(45) NOT NULL,
+	PRIMARY KEY (`idusuarios`));
+  
+  
+  CREATE TABLE IF NOT EXISTS produtos (
 		idprodutos int not null auto_increment,
 		nome VARCHAR(100) NOT NULL,
 		precoUnitario DECIMAL(10,2) not null,
@@ -39,6 +47,7 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
 	  cep INT(11),
 	  endereco VARCHAR(100) NULL DEFAULT NULL,
 	  numero int,
+	  bairro VARCHAR(45) NULL DEFAULT NULL,
 	  cidade VARCHAR(45) NULL DEFAULT NULL,
 	  complemento VARCHAR(45) NULL DEFAULT NULL,
 	  estado varchar(45) NULL DEFAULT NULL,

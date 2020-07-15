@@ -5,18 +5,26 @@ class Cliente
     var $nome;
     var $idade;
     var $sexo;
+    var $bairro;
+    var $estado;
+    var $cidade;
     var $endereco;
     var $numero;
     var $complemento;
+    var $cep;
 
-    function __construct($_idCliente, $_nome, $_idade, $_sexo, $_endereco, $_numero, $_complemento)
+    function __construct($_nome, $_idade, $_sexo, $_endereco, $_bairro, $_estado, $_numero, $_complemento, $_cep, $_cidade)
     {
-        $this->idCliente = $_idCliente;
         $this->nome = $_nome;
-        $this->idade = $_sexo;
         $this->endereco = $_endereco;
         $this->numero = $_numero;
         $this->complemento = $_complemento;
+        $this->estado = $_estado;
+        $this->bairro = $_bairro;
+        $this->cep = $_cep;
+        $this->cidade = $_cidade;
+        $this->idade = $_idade;
+        $this->sexo = $_sexo;
     }
 
     function getIdCliente()
@@ -74,5 +82,37 @@ class Cliente
     function setComplemento($_complemento)
     {
         $this->complemento = $_complemento;
+    }
+    function getBairro()
+    {
+        return $this->bairro;
+    }
+    function setBairro($_bairro)
+    {
+        $this->bairro = $_bairro;
+    }
+    function getEstado()
+    {
+        return $this->estado;
+    }
+    function setEstado($_estado)
+    {
+        $this->estado = $_estado;
+    }
+    function getCep()
+    {
+        return $this->cep;
+    }
+    function setCep($_cep)
+    {
+        $this->cep = $_cep;
+    }
+    function getCidade()
+    {
+        return $this->cidade;
+    }
+    function setCidade($_cidade)
+    {
+        $this->cidade = $_cidade;
     }
 }

@@ -1,0 +1,21 @@
+* {
+    margin: none;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#menu-geral {
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+}

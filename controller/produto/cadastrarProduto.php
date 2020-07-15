@@ -9,22 +9,11 @@
 <body>
     <?php
 
+    include("../conexao.php");
     $nome = $_POST["nome"];
     $preco = $_POST["preco"];
-
-    //conexão com o banco de dados
-    $ip = "localhost";
-    $usuario = "root";
-    $senha = "";
-
-    $conexao = new mysqli($ip, $usuario, $senha);
-
-    if ($conexao->connect_error) {
-        die("Conexão falhou: " . $conexao->connect_error); // Termina se houver algum problema
-    }
-    echo "Conexão feita com sucesso!";
-
-    $conexao->select_db("dbpedidos");
+    $con = new connectedMysql();
+    $conexao = $con->conecta();
 
     //executa o sql de inserção da pessoa
     $sql = "INSERT INTO Produtos (nome, precoUnitario)
@@ -36,9 +25,9 @@
         echo ("<script>
             let confirm = window.confirm('Cadastrado com sucesso, deseja cadastra outro?');
             if(confirm) {
-                window.location.href = '../view/cadastraProduto.html'
+                window.location.href = '../../view/produto/cadastraProduto.html'
             } else {
-                window.location.href = '../view/menu.html'
+                window.location.href = '../../view/menu.html'
             }
         </script>");
     } else {
