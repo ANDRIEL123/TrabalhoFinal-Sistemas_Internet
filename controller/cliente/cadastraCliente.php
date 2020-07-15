@@ -50,7 +50,7 @@
         echo ("<script>
             let confirm = window.confirm('Cadastrado com sucesso, deseja cadastra outro?');
             if(confirm) {
-                window.location.href = '../view/cliente/cadastraCliente.html'
+                window.location.href = '../../view/cliente/cadastraCliente.html'
             } else {
                 window.location.href = '../../view/menu.html'
             }
