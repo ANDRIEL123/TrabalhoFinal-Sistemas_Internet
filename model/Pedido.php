@@ -11,6 +11,10 @@ class Pedido extends Cliente
 
     var $listaProdutos = array();
 
+    function __construct()
+    {
+    }
+
     function getIdCliente()
     {
         return $this->idCliente;
