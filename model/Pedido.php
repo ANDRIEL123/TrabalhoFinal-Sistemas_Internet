@@ -1,8 +1,6 @@
 <?php
-include("Produto.php");
-include("Cliente.php");
 
-class Pedido extends Cliente
+class Pedido
 {
     var $idPedido;
     var $idCliente;
